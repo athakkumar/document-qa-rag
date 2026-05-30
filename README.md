@@ -10,40 +10,13 @@ Built with **LangChain (LCEL)**, **Google Gemini 2.5 Flash**, **ChromaDB**, **Fa
 
 > Upload a PDF -> Ask questions -> Get grounded answers with source chunks
 
-![DocuAsk Demo](assets/demo.png)
+![document-qa-rag](assets/demo.png)
 
 ---
 
 ## Architecture
 
-```
-PDF Upload
-    │
-    ▼
-PyMuPDF (text extraction)
-    │
-    ▼
-RecursiveCharacterTextSplitter (800 char chunks, 100 overlap)
-    │
-    ▼
-HuggingFace Embeddings (all-MiniLM-L6-v2)
-    │
-    ▼
-ChromaDB (local vector store)
-    │
-    ▼
-User Question ──► Similarity Search (top-k chunks)
-                        │
-                        ▼
-              LangChain LCEL Pipeline
-              {context} + {question}
-                        │
-                        ▼
-              Gemini 2.5 Flash (LLM)
-                        │
-                        ▼
-              Grounded Answer + Source Chunks
-```
+![Architecture Diagram](assets/arch.png)
 
 ---
 
