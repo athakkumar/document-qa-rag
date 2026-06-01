@@ -16,7 +16,11 @@ Built with **LangChain (LCEL)**, **Google Gemini 2.5 Flash**, **ChromaDB**, **Fa
 
 ## Architecture
 
-![Architecture Diagram](assets/arch.png)
+## Architecture
+
+<img src="assets/arch.png" alt="Architecture Diagram" width="50%">
+
+---
 
 ---
 
